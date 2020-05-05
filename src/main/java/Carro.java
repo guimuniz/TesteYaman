@@ -11,15 +11,15 @@ public class Carro {
         return this.cor;
     }
 
-    public void setCor(String cor){
-        this.cor = cores;
+    public void setCor(final String cor){
+        this.cor = cor;
     }
 
     public String getModelo(){
         return this.modelo;
     }
 
-    public void setModelo(String modelo){
+    public void setModelo(final String modelo){
         this.modelo = modelo;
     }
 
@@ -35,8 +35,8 @@ public class Carro {
         return this.ligado;
     }
 
-    public Carro(String cor, String modelo, Double velocidadeMáxima){
-        velocidadeAtual = 0;
+    public Carro(final String cor, final String modelo, final Double velocidadeMaxima, Double velocidadeAtual){
+        this.velocidadeAtual = 0.0;
         this.cor = cor;
         this.modelo = modelo;
         this.velocidadeMaxima = velocidadeMaxima;
@@ -56,15 +56,15 @@ public class Carro {
         return this.ligado;
     }
     //acelera uma certa quantidade
-    public void acelera(Double quantidade) {
-        Double velocidadeNova = this.velocidadeAtual + quantidade;
+    public void acelera(final Double quantidade) {
+        final Double velocidadeNova = this.velocidadeAtual + quantidade;
         if (velocidadeNova < this.velocidadeMaxima){
             this.velocidadeAtual = velocidadeNova;
         }
     }
     //devolve a marcha do carro
     public Integer pegaMarcha() {
-        if (this.velocidadeAtual < 0,0) {
+        if (this.velocidadeAtual < 0.0) {
             return -1;
         }
         if (this.velocidadeAtual >= 0.00 || this.velocidadeAtual < 40) {
