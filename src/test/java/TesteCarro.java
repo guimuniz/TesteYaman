@@ -3,11 +3,20 @@ import org.junit.jupiter.api.Assertions;
 
 public class TesteCarro {
 
-    Carro fusca = new Carro("vermelho", "gol", 100.0, 70.0);
+    Carro Armindo = new Carro("vermelho", "gol_bolinha", 100.0, 70.0);
 
     @Test
-    public void testeLigaedesliga(){
-        Assertions.assertEquals("O carro foi desligado", fusca.ligaedesliga());
-        Assertions.assertEquals("O carro foi ligado", fusca.ligaedesliga());
+    public void testeModelo(){
+        Assertions.assertEquals("gol_bolinha",Armindo.getModelo());
+    }
+
+    @Test
+    public void testeCor(){
+        Assertions.assertEquals("vermelho",Armindo.getCor());
+    }
+
+    @Test
+    public void testeVelocidadeMaxima(){
+        Assertions.assertEquals(100.0,Armindo.getVelocidadeMaxima());
     }
 }
