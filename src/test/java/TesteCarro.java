@@ -19,4 +19,9 @@ public class TesteCarro {
     public void testeVelocidadeMaxima(){
         Assertions.assertEquals(100.0,Armindo.getVelocidadeMaxima());
     }
+
+    @Test
+    public void testePegaMarcha(){
+        Assertions.assertEquals(2, Armindo.pegaMarcha());
+    }
 }
